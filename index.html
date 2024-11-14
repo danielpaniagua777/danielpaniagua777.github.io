@@ -1,0 +1,116 @@
+<html lang="es">
+<head>
+<title>Blog de Daniel2</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Blog de Daniel</title>
+</head>
+
+
+<body>
+<div id="container">
+		<div class="box">
+<header>
+
+</header>
+<nav> <ul> <li><a href="#home">Inicio</a></li> <li><a href="#about">Cosas por hacer</a></li> <li><a href="#services">Videojuegos</a></li> <li><a href="#dibujo">Dibujos</a></li><li><a href="#contactos">Contactos</a></li></ul> </nav>
+    <br>
+<section>
+<div class="columna">
+<h4>INTRODUCCIÓN</h4>
+<p>Hooola que tal, me llamó Daniel y bienvenidos a mi primera pagina web creada en HTML. Este blog fue creado para un trabajo escolar en la asignatura de TIC. Aquí podréis encontrar unos proyectos escolares que he recopilado junto a otras cosas más como reseñas de mis videojuegos favoritos y algunos dibujos que he hecho.  </p>
+<center><img src="Imagenes/placeholder.jpg"></center>
+</div>
+
+
+
+<aside> 
+            <h2>FECHAS</h2> 
+            <ul> 
+                <li><a href="#"><h3>2024</h3></a></li> 
+                <li><a href="#">Octubre</a></li> 
+                <li><a href="#">Septiembre</a></li> 
+                <li><a href="#"><h3>2023</h3></a></li>         
+                <li><a href="#">Julio</a></li> 
+                <li><a href="#">Junio</a></li> 
+                
+            </ul> 
+</aside> 
+</section>
+
+<br>
+<br>
+
+<section>
+<div id="ae1">
+<h4>COSAS POR HACER</h4>
+<ul>
+ <li><del>Esquema de filosofía</del></li>
+ <li>Mandar el trabajo de historia antes del 25 de noviembre</li>
+ <li>Hacer comic de lengua</li>   
+<li>Terminar la pagina web</li>
+									</ul>
+</div>
+
+
+
+</section>
+
+<center><h3 style="color:white;">COMENTARIOS</h3></center>
+<center><div class="columna">
+<form name="prueba">
+   Nombre: <input type="text"id="nombre" />
+   Correo: <input type="text"id="correo" />
+<br>
+<br>
+   Tu dirección de correo no será publicada
+<br>
+ Escribe tu comentario
+<br>
+    
+   <textarea name="mensaje" id="mensaje" cols="50" rows="10"
+  placeholder="Escriba su comentario aquí"></textarea>
+<br>
+</form>
+</div>
+</center>
+
+<script>
+function unirTexto(){
+
+var c1=document.getElementById('nombre').value;
+var c2=document.getElementById('correo').value;
+var t1=document.getElementById('mensaje').value;
+  var p = t1.split(/\n/g);
+  var resultado = document.getElementById('resultado');
+var comentario = document.getElementById('comentario');
+  var html = "";
+   for (var i = 0; i < p.length; i++) {
+    html += c1 +' '+ "ha escrito "+ p[i];
+  resultado.value = html;
+  resultado.style.display = "block";
+comentario.value = html;
+  comentario.style.display = "inline";
+}}
+
+function limpiar() {
+document.getElementById('nombre').value =" ";
+document.getElementById('correo').value =" ";
+document.getElementById('mensaje').value =" ";
+
+resultado.style.display = "none";
+}
+</script>
+<button onclick="unirTexto();" id="unir">Publicar</button>
+<button onclick="limpiar();" id="limpiar">Nuevo</button><br>
+<br>
+<p style=" color:white;">Mensaje:</p><br><br> <center><textarea style="display:none;" id="resultado" rows="5" cols="50"></textarea></center>
+<br>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
